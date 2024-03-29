@@ -1,0 +1,48 @@
+{
+    "name": "helloworld-vuejs-widget",
+    "widgetName": "helloworld-vuejs-widget",
+    "version": "1.0.0",
+    "description": "Hello World VueJS Widget component",
+    "license": "",
+    "author": "",
+    "main": "index.html",
+    "scripts": {
+        "build": "webpack --config-name prod --progress",
+        "devtools": "./node_modules/.bin/vue-devtools",
+        "postversion": "git push --follow-tags",
+        "lint": "eslint src/**/*.{ts,vue}",
+        "lintFix": "eslint src/**/*.{ts,vue} --fix",
+        "start": "webpack serve --config-name dev --open --progress"
+    },
+    "eslintIgnore": [
+        "src/index.html",
+        "src/static/*",
+        "dist",
+        "node_modules",
+        "/*.js"
+    ],
+    "dependencies": {
+        "vue": "3.3.4"
+    },
+    "devDependencies": {
+        "@babel/core": "7.x",
+        "@babel/preset-env": "7.x",
+        "@mdi/font": "7.x",
+        "@vue/compiler-sfc": "3.x",
+        "babel-loader": "9.1.2",
+        "clean-webpack-plugin": "*",
+        "css-loader": "6.7.3",
+        "deepmerge": "4.x",
+        "html-webpack-plugin": "*",
+        "sass": "1.x",
+        "sass-loader": "13.2.x",
+        "style-loader": "3.x",
+        "vue-loader": "17.x",
+        "webpack": "5.x",
+        "webpack-cli": "5.x",
+        "webpack-merge": "5.8.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}
