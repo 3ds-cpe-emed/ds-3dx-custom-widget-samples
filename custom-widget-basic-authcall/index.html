@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+    <head>
+        <title>CPE EMED - Sample Widget</title>
+
+        <meta name="author" content="Dassault Systèmes Euromed CPE team" />
+        <meta name="description" content="" />
+        <meta name="apiVersion" content="1.0" />
+        <meta name="debugMode" content="true" />
+        <meta name="strictMode" content="false" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Application Preferences -->
+        <widget:preferences>          
+        </widget:preferences>
+        
+        <script src="./scripts/main.js"></script>
+
+    </head>
+
+    <body >
+        <h1>Welcome to the 3DEXPERIENCE WEB SERVICES CPE EMED Workshop - sample 2</h1>
+        <h2>Simple example of using WAFData to call a 3DEXPERIENCE Web Services to get the security contexts available to the user.</h2>
+        <ol>
+            <li>Open the widget menu - note that right after loading there are no Preferences available.</li>
+            <li>Click on the Refresh menu entry</li>
+            <li>Now check that the Preferences is now available on the widget menu with a list of security contexts.</li>
+        </ol>
+    </body>
+
+	<!-- Widget Initialization -->
+	<script type="text/javascript">
+        function widgetLoading() {
+            if (widget) {
+                executeInitWidget(widget);
+			} else {
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+        }
+		widgetLoading();
+    </script>
+</html>
